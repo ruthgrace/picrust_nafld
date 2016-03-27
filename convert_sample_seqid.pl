@@ -21,6 +21,7 @@ while(defined(my $l = <IN>)){
   chomp $l;
   if ($l =~ /^>/) {
     $l =~ s/^>//;
+    $l =~ s/NASH_FO/NASH.FO//;
     @items=split(/_/,$l);
     if (scalar(@items) != 2) {
       print "Unable to parse $l\n";
