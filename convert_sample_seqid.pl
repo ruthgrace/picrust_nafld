@@ -26,6 +26,7 @@ while(defined(my $l = <IN>)){
     $underscoreIndex = index($l, $underscore);
     $seqid = substr $l, 0, $underscoreIndex;
     $sample = substr $l, $underscoreIndex + 1, length($l) - $underscoreIndex - 1;
+    $sample =~ s/_/./;
     print OUT ">" . $sample . "_" . $seqid  . "\n";
   }
   else {
