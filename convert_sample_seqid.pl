@@ -27,7 +27,7 @@ while(defined(my $l = <IN>)){
     }
     $seqid = $items[0];
     $sample = $items[1];
-    print OUT ">" . $seqid . "_" .  $sample . "\n";
+    print OUT ">" . $sample . "_" . $seqid  . "\n";
   }
   else {
     print OUT "$l\n";
