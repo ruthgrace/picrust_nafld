@@ -6,6 +6,12 @@
 perl -ne 'y/@/>/;print($_.<>)&&<>&&<>' ../reads/overlap_filtered/overlap_filtered.fastq > ./overlap_filtered.fasta
 ```
 
+## convert fasta file to have sample_seqid identifiers
+
+```
+nohup perl convert_sample_seqid.pl /Volumes/longlunch/seq/LRGC/AF9KK_May1_2015/source_files_Bariatric/bowtie2/combined_rekeyed_tabbed.fa ./combined_rekeyed_tabbed_sample_seqid.fa > convert_sample_seqid_nohup.out 2>&1&
+```
+
 ## pick closed reference otus
 
 Using this tutorial: http://picrust.github.io/picrust/tutorials/otu_picking.html#otu-picking-tutorial
