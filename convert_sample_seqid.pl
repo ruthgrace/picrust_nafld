@@ -17,7 +17,7 @@ unless(open OUT, '>', $outfile) {
 my $sample;
 my $seqid;
 my @items;
-while(defined(my $l = <BLAST>)){
+while(defined(my $l = <IN>)){
   chomp $l;
   if ($l =~ /^>/) {
     $l =~ s/^>//;
