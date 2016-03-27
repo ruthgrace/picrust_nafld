@@ -22,7 +22,7 @@ while(defined(my $l = <BLAST>)){
   if ($l =~ /^>/) {
     $l =~ s/^>//;
     @items=split(/_/,$l);
-    if (scalar(items) != 2) {
+    if (scalar(@items) != 2) {
       print "Unable to parse $l\n";
     }
     $seqid = $items[0];
