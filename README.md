@@ -32,7 +32,7 @@ macqiime
 Run within macqiime:
 
 ```
-nohup pick_closed_reference_otus.py -i $PWD/overlap_filtered.fasta -o $PWD/ucrC97/ -p $PWD/otu_picking_params_97.txt -r $PWD/gg_13_5_otus/rep_set/97_otus.fasta -t $PWD/gg_13_5_otus/taxonomy/97_otu_taxonomy.txt > pick_closed_reference_otus_nohup.out 2>&1&
+nohup pick_closed_reference_otus.py -i $PWD/combined_rekeyed_tabbed_sample_seqid.fa -o $PWD/ucrC97/ -p $PWD/otu_picking_params_97.txt -r $PWD/gg_13_5_otus/rep_set/97_otus.fasta -t $PWD/gg_13_5_otus/taxonomy/97_otu_taxonomy.txt > pick_closed_reference_otus_nohup.out 2>&1&
 ```
 
 
