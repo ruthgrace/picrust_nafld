@@ -16,18 +16,16 @@ unless(open OUT, '>', $outfile) {
 }
 my $sample;
 my $seqid;
-my @items;
+my $underscoreIndex;
+my $underscore = '_';
 while(defined(my $l = <IN>)){
   chomp $l;
   if ($l =~ /^>/) {
     $l =~ s/^>//;
     $l =~ s/NASH_FO/NASH.FO/;
-    @items=split(/_/,$l);
-    if (scalar(@items) != 2) {
-      print "Unable to parse $l\n";
-    }
-    $seqid = $items[0];
-    $sample = $items[1];
+    $underscoreIndex = index($l, $underscore);
+    $seqid = substr $l, 0, $underscoreIndex;
+    $sample = substr $l, $underscoreIndex + 1, length($l) - $underscoreIndex - 1;
     print OUT ">" . $sample . "_" . $seqid  . "\n";
   }
   else {
