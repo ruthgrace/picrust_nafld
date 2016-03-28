@@ -35,4 +35,11 @@ Run within macqiime:
 nohup pick_closed_reference_otus.py -i $PWD/combined_rekeyed_tabbed_sample_seqid.fa -o $PWD/ucrC97/ -p $PWD/otu_picking_params_97.txt -r $PWD/gg_13_5_otus/rep_set/97_otus.fasta -t $PWD/gg_13_5_otus/taxonomy/97_otu_taxonomy.txt > pick_closed_reference_otus_nohup.out 2>&1&
 ```
 
+Normalize by copy number
+
+```
+nohup normalize_by_copy_number.py -f -i /Users/ruth/Documents/picrust_nafld/ucrC97/uclust_ref_picked_otus/combined_rekeyed_tabbed_sample_seqid_clusters.uc -o normalized_otus.biom > normalize_by_copy_number_nohup.out 2>&1&
+```
+
+I was never able to get this step to work. I always got a couldn't find biom.load_table error. Giving up ...
 
